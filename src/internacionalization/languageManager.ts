@@ -3,7 +3,7 @@ import { MajorNamesEn, MinorNamesEn } from "./En/cards";
 import { SymbolsEn } from "./En/symbolsEn";
 import { MajorNamesPtBR, MinorNamesPtBR } from "./PtBr/cards";
 import { SymbolsPtBR } from "./PtBr/symbolsPtBR";
-class LanguageManager {
+export class LanguageManager {
     private static instance: LanguageManager;
     private symbols: any;
     private minors: any;
@@ -36,6 +36,15 @@ class LanguageManager {
                 this.lang = 0;
                 break;
         }
+    }
+    public getMinors(): any {
+        return this.minors;
+    }
+    public getSymbols(): any {
+        return this.symbols;
+    }
+    public getMajors(): any {
+        return this.majors;
     }
     public getLanguage(): string {
         return Language[this.lang];
