@@ -1,14 +1,13 @@
 import { LanguageManager } from "../internacionalization/languageManager";
 import { CardI } from "./CardI";
-import { Symbols } from "./unionInternacionalization";
 
 export class CardMinor implements CardI {
     private value: number;
+    private symbol: number;
     private name: string;
     private image: string;
     private back: string;
     private show: string;
-    private symbol: Symbols;
     private languageManager: LanguageManager;
     constructor(value: number, image: string, back: string, symbol: number) {
         this.value = value;
