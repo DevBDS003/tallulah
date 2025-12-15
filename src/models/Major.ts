@@ -1,22 +1,19 @@
 import { LanguageManager } from "../internacionalization/languageManager";
 import { CardI } from "./CardI";
 
-export class CardMinor implements CardI {
+export class CardMajor implements CardI {
     private value: number;
-    private symbol: number;
     private name: string;
     private image: string;
     private upsideDown: boolean;
     private languageManager: LanguageManager;
-    constructor(value: number, image: string, symbol: number, upsideDown: boolean) {
+    constructor(value: number, image: string, upsideDown: boolean) {
         this.value = value;
         this.image = image;
         this.upsideDown = upsideDown;
-        this.symbol = symbol;
         this.languageManager = LanguageManager.getInstance();
         this.name =
-            this.languageManager.getMinors()[value] +
-            this.languageManager.getSymbols()[symbol];
+            this.languageManager.getMajors()[value]+` (${value})`;
     }
     public rotate(): void {
         this.upsideDown = !this.upsideDown;
@@ -33,8 +30,5 @@ export class CardMinor implements CardI {
     }
     public getValue(): number {
         return this.value;
-    }
-    public getSymbol(): number {
-        return this.symbol;
     }
 }

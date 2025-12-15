@@ -1,3 +1,7 @@
 export interface CardI {
-    swap(): void;
+    getName(): string;
+    getValue(): number;
+    getUpsideDown(): boolean;
+    getImage(): string;
+    rotate(): void;
 }
