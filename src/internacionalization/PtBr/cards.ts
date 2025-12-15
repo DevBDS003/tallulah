@@ -1,2 +1,41 @@
-export enum MinorNamesPtBR {}
-export enum MajorNamesPtBR {}
+export const MinorNamesPtBR: Array<string> = [
+    "Ás de ",
+    "Dois de ",
+    "Três de ",
+    "Quatro de ",
+    "Cinco de ",
+    "Seis de ",
+    "Sete de ",
+    "Oito de ",
+    "Nove de ",
+    "Dez de ",
+    "Pajem de ",
+    "Cavaleiro de ",
+    "Rainha de ",
+    "Rei de "
+];
+
+export const MajorNamesPtBR: Array<string> = [
+    "O Louco",
+    "O Mago",
+    "A Sacerdotisa",
+    "A Imperatriz",
+    "O Imperador",
+    "O Hierofante",
+    "Os Enamorados",
+    "O Carro",
+    "A Força",
+    "O Eremita",
+    "A Roda da Fortuna",
+    "A Justiça",
+    "O Enforcado",
+    "A Morte",
+    "A Temperança",
+    "O Diabo",
+    "A Torre",
+    "O Estrela",
+    "A Lua",
+    "O Sol",
+    "O Julgamento",
+    "O Mundo"
+];

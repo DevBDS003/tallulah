@@ -6,8 +6,8 @@ import { SymbolsPtBR } from "./PtBr/symbolsPtBR";
 export class LanguageManager {
     private static instance: LanguageManager;
     private symbols: any;
-    private minors: any;
-    private majors: any;
+    private minors: string[];
+    private majors: string[];
     private lang: number;
     private constructor() {
         this.symbols = SymbolsPtBR;

@@ -1,2 +1,41 @@
-export enum MinorNamesEn {}
-export enum MajorNamesEn {}
+export const MinorNamesEn: Array<string> = [
+    "Ace of ",
+    "Two of ",
+    "Three of ",
+    "Four of ",
+    "Five of ",
+    "Six of ",
+    "Seven of ",
+    "Eight of ",
+    "Nine of ",
+    "Ten of ",
+    "Page of ",
+    "Knight of ",
+    "Queen of ",
+    "King of "
+];
+
+export const MajorNamesEn: Array<string> = [
+    "The Fool",
+    "The Magician",
+    "The High Priestess",
+    "The Empress",
+    "The Emperor",
+    "The Hierophant",
+    "The Lovers",
+    "The Chariot",
+    "Strength",
+    "The Hermit",
+    "The Wheel of Fortune",
+    "Justice", 
+    "The Hanged Man", 
+    "Death", 
+    "Temperance", 
+    "The Devil", 
+    "The Tower", 
+    "The Star", 
+    "The Moon", 
+    "The Sun", 
+    "Judgement", 
+    "The World"
+];
