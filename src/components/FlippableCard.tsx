@@ -1,31 +1,6 @@
 import React, { useState } from "react";
 import { Box, Paper } from "@mui/material";
-
-const cardContainerStyle = {
-    perspective: "1000px",
-    width: "120px",
-    height: "200px",
-    cursor: "pointer",
-};
-
-const cardInnerStyle = (isFlipped: Boolean) => ({
-    position: "relative",
-    width: "100%",
-    height: "100%",
-    textAlign: "center",
-    transition: "transform 0.6s",
-    transformStyle: "preserve-3d",
-    transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
-});
-
-const cardFaceStyle = {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    backfaceVisibility: "hidden",
-    borderRadius: "8px",
-    boxShadow: "4px 4px 10px rgba(0, 0, 0, 0.4)",
-};
+import "../styles/flippableCard.css";
 
 interface FlippableCardProps {
     card: string;
@@ -53,11 +28,11 @@ const FlippableCard = ({
     };
 
     return (
-        <Box sx={cardContainerStyle} onClick={handleFlip}>
-            <Box sx={cardInnerStyle(isFlipped)}>
+        <Box className="cardContainerStyle" onClick={handleFlip}>
+            <Box className={isFlipped ? "cardFlippedStyle" : "cardStyle"}>
                 <Paper
                     elevation={3}
-                    sx={{ ...cardFaceStyle, transform: "rotateY(0deg)" }}
+                    className="cardFaceStyle"
                 >
                     <img
                         src={back}
@@ -71,7 +46,7 @@ const FlippableCard = ({
                 </Paper>
                 <Paper
                     elevation={3}
-                    sx={{ ...cardFaceStyle, transform: "rotateY(180deg)" }}
+                    className="cardFaceStyleMirror"
                 >
                     <img
                         src={card}
